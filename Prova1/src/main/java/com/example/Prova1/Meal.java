@@ -9,6 +9,11 @@ public class Meal {
         this.name = name;
     }
 
+    public Meal(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
     public String getName() {
         return name;
     }

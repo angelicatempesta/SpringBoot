@@ -38,4 +38,20 @@ public class mealController {
         }
        return null;
     }
+
+    @GetMapping("meal/description-match/{phrase}")
+    public Meal mealDescription(@PathVariable("phrase") String f){
+        List<Meal> mealList = new ArrayList<>();
+        mealList.add(new Meal("Pasta al Pesto", "buonissima pasta al pesto di basilico"));
+        mealList.add(new Meal("Pasta all'Arrabbiata", "eccellente pasta piccantissima"));
+        mealList.add(new Meal("Impepata di cozze", "ottime cozze fresche di Ischia"));
+        mealList.add(new Meal("Pollo alla Piastra", "pollo Aia buonissimo ricco di proteine"));
+
+        for (Meal m : mealList) {
+            if (m.getDescription().contains(f)) {
+                return m;
+            }
+        }
+        return null;
+    }
 }
