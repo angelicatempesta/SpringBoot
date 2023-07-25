@@ -15,4 +15,9 @@ public class helloController {
         return "Hello World!";
     }
 
+    @GetMapping("/greeting")
+    public ResponseEntity<String> responseEntity(){
+        return ResponseEntity.ok("Good Afternoon!");
+    }
+
 }
