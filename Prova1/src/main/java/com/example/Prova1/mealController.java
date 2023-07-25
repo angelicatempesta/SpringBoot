@@ -2,6 +2,7 @@ package com.example.Prova1;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -53,5 +54,23 @@ public class mealController {
             }
         }
         return null;
+    }
+
+    @GetMapping("meal/price")
+    public List<Meal> mealPrice(@RequestParam("min") double min,@RequestParam("max") double max){
+        List<Meal> mealList = new ArrayList<>();
+        mealList.add(new Meal("Pasta al Pesto", 12.00));
+        mealList.add(new Meal("Pasta all'Arrabbiata", 9.00));
+        mealList.add(new Meal("Impepata di cozze", 25.00));
+        mealList.add(new Meal("Pollo alla Piastra", 8.50));
+
+        List<Meal> mealListWithPrice = new ArrayList<>();
+
+        for (Meal m : mealList) {
+            if (m.getPrice() >= min && m.getPrice() <= max) {
+               mealListWithPrice.add(m);
+            }
+        }
+        return mealListWithPrice;
     }
 }

@@ -14,6 +14,11 @@ public class Meal {
         this.description = description;
     }
 
+    public Meal(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
     public String getName() {
         return name;
     }
