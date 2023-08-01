@@ -34,6 +34,6 @@ public class MealService {
     }
 
     public List<Meal> getMeals(){
-
+        return mealDao.getMeals();
     }
 }
