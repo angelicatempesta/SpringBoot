@@ -54,7 +54,7 @@ public class esercizio3Controller {
        for(Meal m : mealList){
            if(m.getName().equals(mealName)){
                m.setPrice(newPrice);
-               return ResponseEntity.ok("You correctly updated the price of a certain meal!")
+               return ResponseEntity.ok("You correctly updated the price of a certain meal!");
            }
        }
         return ResponseEntity.badRequest().build();
