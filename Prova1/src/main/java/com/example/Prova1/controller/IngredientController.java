@@ -38,7 +38,7 @@ public class IngredientController{
     }
 }
 
-@PutMapping("/update")
+@PutMapping("/update/{id}")
     public ResponseEntity<String> updateIngredient(@PathVariable ("id") long id, @RequestBody Ingredient ingredient){
     try{
         serviceIng.updateIngredient(id, ingredient);
@@ -47,7 +47,7 @@ public class IngredientController{
         return ResponseEntity.badRequest().build();
     }
 }
-@DeleteMapping("/delete")
+@DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteIngredient(@PathVariable("id") long id){
     try {
         serviceIng.deleteIngredient(id);

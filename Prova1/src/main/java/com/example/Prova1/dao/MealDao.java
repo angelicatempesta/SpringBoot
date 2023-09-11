@@ -1,28 +1,13 @@
 package com.example.Prova1.dao;
 
-import com.example.Prova1.model.Meal;
 
-import java.util.ArrayList;
+import com.example.Prova1.model.Meal;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import java.util.List;
 
-public class MealDao {
-    private List<Meal> meals = new ArrayList<>();
 
-    public void addMeal(Meal meal){
-        this.meals.add(meal);
-    }
+public interface MealDao extends JpaRepository <Meal, Long> {
 
-    public void deleteMeal(String mealName){
-        this.meals.removeIf(m -> m.getName().equals(mealName));
-    }
-
-    public void updateMeal(Meal meal){
-        this.meals.removeIf(m -> m.getName().equals(meal.getName()));
-        this.meals.add(meal);
-    }
-
-    public List<Meal> getMeals(){
-        return this.meals;
-    }
-
+List<Meal> findByIsWinterMeal(boolean isWinterMeal);
 }
