@@ -1,5 +1,6 @@
-package com.example.Prova1;
+package com.example.Prova1.controllerPrimiEsercizi;
 
+import com.example.Prova1.model.Meal;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

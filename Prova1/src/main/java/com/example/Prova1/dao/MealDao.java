@@ -1,6 +1,6 @@
 package com.example.Prova1.dao;
 
-import com.example.Prova1.Meal;
+import com.example.Prova1.model.Meal;
 
 import java.util.ArrayList;
 import java.util.List;

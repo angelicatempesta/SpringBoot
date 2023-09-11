@@ -1,17 +1,16 @@
-package com.example.Prova1;
+package com.example.Prova1.controllerPrimiEsercizi;
 
+import com.example.Prova1.model.Meal;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @RestController
-public class mealController {
+public class mealControllerEsercizio2 {
     @GetMapping("/meals")
     public List<Meal> mealList() {
         List<Meal> mealList = new ArrayList<>();

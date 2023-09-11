@@ -1,4 +1,4 @@
-package com.example.Prova1;
+package com.example.Prova1.controllerPrimiEsercizi;
 
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;

@@ -1,8 +1,7 @@
 package com.example.Prova1.controller;
 
-import com.example.Prova1.Meal;
+import com.example.Prova1.model.Meal;
 import com.example.Prova1.service.MealService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

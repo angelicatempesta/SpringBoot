@@ -1,4 +1,4 @@
-package com.example.Prova1;
+package com.example.Prova1.model;
 
 public class Meal {
     private String name;

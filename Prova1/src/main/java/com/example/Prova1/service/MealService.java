@@ -1,6 +1,6 @@
 package com.example.Prova1.service;
 
-import com.example.Prova1.Meal;
+import com.example.Prova1.model.Meal;
 import com.example.Prova1.dao.MealDao;
 import org.springframework.beans.factory.annotation.Autowired;
 
